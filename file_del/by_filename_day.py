@@ -32,6 +32,7 @@ def iter_chk(file_path: str, daykeep: int) -> bool:
 
 
 @click.command()
+@click.option("--re", help="python re match str fmt", default=r"(_\d{4})")
 @click.option("--daykeep", help="file keep day count", default=3)
 @click.option("--path", help="path to execute check-keep&delete", default=os.curdir)
 def run(path, daykeep: int):
